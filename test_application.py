@@ -1,6 +1,7 @@
 import pytest
 from application import create_app
-
+def test_sum():
+    assert 1 = 1
 # @pytest.fixture
 # def client():
 #     app = create_app()
