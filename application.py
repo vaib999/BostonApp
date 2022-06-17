@@ -2,8 +2,8 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-def create_app(application):
-    
+def create_app():
+    application = app = Flask(__name__)
     model = pickle.load(open('model.pkl', 'rb'))
 
     @application.route('/')
@@ -26,6 +26,5 @@ def create_app(application):
     return application
 
 if __name__ == "__main__":
-    application = app = Flask(__name__)
-    my_app = create_app(application)
+    my_app = create_app()
     my_app.run(host='0.0.0.0', port=8080)

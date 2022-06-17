@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - pip3 install flask numpy pytest sklearn
+      - pip3 install numpy pytest sklearn
   build:
     commands:
       - python -m pytest --junitxml=pytest_reports/pytest_report.xml

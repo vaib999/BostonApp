@@ -3,12 +3,11 @@ import pytest
 
 # First party modules
 from application import create_app
-from flask import Flask, request, jsonify, render_template
+
 
 @pytest.fixture
 def client():
-    application = app = Flask(__name__)
-    app = create_app(application)
+    app = create_app()
     app.config["TESTING"] = True
     with app.test_client() as client:
         yield client
