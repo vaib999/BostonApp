@@ -1,7 +1,4 @@
-# Third party modules
 import pytest
-
-# First party modules
 from application import create_app
 
 
