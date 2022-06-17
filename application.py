@@ -23,8 +23,8 @@ def create_app():
 
         return render_template('index.html', prediction_text='Price of house $ {}'.format(output))
 
-    return app
+    return application
 
 if __name__ == "__main__":
-    app = create_app()
-    app.run(host='0.0.0.0', port=8080)
+    application = create_app()
+    application.run(host='0.0.0.0', port=8080)
